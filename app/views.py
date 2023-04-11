@@ -32,8 +32,8 @@ from .models import Project, Profile
 from sklearn.linear_model import LinearRegression
 from sklearn import preprocessing, model_selection, svm
 
-def index(request):
-    return render(request, 'index.html')
+def home(request):
+    return render(request, 'users/home.html')
 
 class RegisterView(View):
     form_class = RegisterForm

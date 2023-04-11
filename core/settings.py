@@ -158,8 +158,8 @@ LOGIN_URL = 'login'
 
 
 # social auth configs for github
-#SOCIAL_AUTH_GITHUB_KEY = str(os.getenv('GITHUB_KEY'))
-#SOCIAL_AUTH_GITHUB_SECRET = str(os.getenv('GITHUB_SECRET'))
+SOCIAL_AUTH_GITHUB_KEY = str(os.getenv('GITHUB_KEY'))
+SOCIAL_AUTH_GITHUB_SECRET = str(os.getenv('GITHUB_SECRET'))
 
 # social auth configs for google
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = str(os.getenv('GOOGLE_KEY'))

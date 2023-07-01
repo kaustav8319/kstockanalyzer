@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -14,8 +16,38 @@
     <title>{% block title %} {% endblock %} </title>
     
 </head>
+<style>body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-<body style="background-color: black;">
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Responsive layout - adjust the layout based on screen size */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+}
+</style>
+
+<body style="background-image: url('https://cutewallpaper.org/21/red-and-black-desktop-backgrounds/Black-And-Red-Desktop-Backgrounds-HD-wallpaper.png');
+    color: #000000;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.9;"
+
+>
+  <div style="justify-content: center; text-align: center; position: relative;">  <a style="color: #d8d8d8; padding: 20px; padding-top: 30px; text-align: center; justify-content: center; margin-left: 20px;" class="typewrite h3 fw-bold mb-2 " data-period="2000" data-type='[ "Welcome To The KStock Analyzer", "Know The Math Behind Getting Rich in the Stock Market." ]'>
+    <span class="wrap"></span>
+  </a></div>
+    
   {% if user.is_authenticated %}
   <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
@@ -74,6 +106,7 @@
                     <a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a>
                   {% else %}
                     <a href="{% url 'login' %}" class="nav-item nav-link">Sign in</a>
+
                   {% endif %}
 
                 </div>

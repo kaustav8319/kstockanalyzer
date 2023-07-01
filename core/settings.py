@@ -85,18 +85,12 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#         'NAME': BASE_DIR / 'db1.sqlite3',
-#     }
-# }
-
-
-DATABASES = {'default': dj_database_url.config()}
-
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 LOGGING = {
     'version': 1,
@@ -187,5 +181,4 @@ SESSION_COOKIE_AGE = 60 * 60 * 24 * 30
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-#STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 django_heroku.settings(locals())

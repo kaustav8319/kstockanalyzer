@@ -1,4 +1,5 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
 <head>
     <!-- Required meta tags -->
@@ -9,13 +10,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!--Font awesome icons -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!-- Link My Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/new_style.css' %}">
 
     <title>{% block title %} {% endblock %} </title>
     
 </head>
 
-<body style="background-color: black;">
+<body style="background-image: url('{% static 'image/2567_01_2x.png'%}'); background-size: cover; background-position: 'center'; background-repeat: no-repeat;">
+<!-- <body style="background-color: #000000;"> -->
   {% if user.is_authenticated %}
   <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
@@ -58,10 +63,10 @@
   </div>
   {% endif %}
 
-  <div class="container p-1 my-1">
+  <div style="overflow-x: hidden; width: 90%; margin: 0 auto;">
     <div class="row">
       <div class="col-md-12">
-        <nav class="navbar navbar-expand-md navbar-dark " style="background-color: #5050503d; font-weight: 500;">
+        <!-- <nav class="navbar navbar-expand-md navbar-dark " style="background-color: #5050503d; font-weight: 500;">
           <a href="/" class="navbar-brand">Home</a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -78,6 +83,21 @@
 
                 </div>
             </div>
+        </nav> -->
+        <nav class="navbar navbar-expand-md my-nav">
+          <img src="{% static 'image/log.png' %}" class="logo" />
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <img class="navbar-toggler-icon" src="{% static 'image/toggle_btn.png'%}" />
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav justify-content-end nav-item-box">
+              <a class="nav-item nav-link" href="/">Home</a>
+              <a class="nav-item nav-link" href="#">About Us</a>
+              <a class="nav-item nav-link" href="#">Services</a>
+              <a class="nav-item nav-link" href="#">Portfolio</a>
+              <a class="nav-item nav-link" href="#">Contact</a>
+            </div>
+          </div>
         </nav>
         <!--Any flash messages pop up in any page because this is the base template-->
         {% if messages %}

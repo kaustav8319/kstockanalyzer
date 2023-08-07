@@ -17,37 +17,73 @@
             </div>
         </div>
         <div class="content-section-2">
+            <div class="floating-menu">
+                <div class="floating-menu-item" id="user">
+                    <img src="{% static 'image/user_icon.png' %}" id="user_icon" style="display: none;" alt="user_icon"  width="20px" height="20px">
+                    <img src="{% static 'image/user_icon1.png' %}" id="user_icon1" style="display: block;" alt="user_icon1"  width="20px" height="20px">
+                </div>
+                <div class="floating-menu-item" id="shield_icon">
+                    <img src="{% static 'image/shield.png' %}" id="shield" style="display: block;" alt="shield"  width="20px" height="20px">
+                    <img src="{% static 'image/shield1.png' %}" id="shield1" style="display: none;" alt="shield1"  width="20px" height="20px">
+                </div>
+                <div class="floating-menu-item" id="dollar_icon">
+                    <img src="{% static 'image/dollar.png' %}" id="dollar" alt="dollar" style="display: block;"  width="10px" height="20px">
+                    <img src="{% static 'image/dollar.png' %}" id="dollar1" alt="dollar1" style="display: none;"  width="10px" height="20px">
+                </div>
+            </div>
             <div style="background-image: url('{% static 'image/form_bg.png' %}');" class="form-box">
-                <h3 class="form-heading">Create Account</h3>
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control extra-style" placeholder="First Name" id="fname">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control extra-style" placeholder="Last Name" id="lname">
-                    </div>
-                    <div class="d-flex justify-content-between form-group-outer">
-                        <div class="form-group item">
-                            <input type="text" class="form-control extra-style" placeholder="Username" id="uname">
+                <div id="form_section">
+                    <h3 class="form-heading">Create Account</h3>
+                    <form id="signup_form">
+                        <div class="form-group">
+                            <input type="text" class="form-control extra-style" placeholder="First Name" id="fname">
                         </div>
-                        <div class="form-group item">
-                            <input type="email" class="form-control extra-style" placeholder="Email" id="email">
+                        <div class="form-group">
+                            <input type="text" class="form-control extra-style" placeholder="Last Name" id="lname">
                         </div>
-                    </div>
-                    <div class="d-flex justify-content-between form-group-outer">
-                        <div class="form-group item">
-                            <input type="password" class="form-control extra-style" placeholder="Password" id="pwd">
+                        <div class="d-flex justify-content-between form-group-outer">
+                            <div class="form-group item">
+                                <input type="text" class="form-control extra-style" placeholder="Username" id="uname">
+                            </div>
+                            <div class="form-group item">
+                                <input type="email" class="form-control extra-style" placeholder="Email" id="email">
+                            </div>
                         </div>
-                        <div class="form-group item">
-                            <input type="password" class="form-control extra-style" placeholder="Confirm Password" id="cpwd">
+                        <div class="d-flex justify-content-between form-group-outer">
+                            <div class="form-group item">
+                                <input type="password" class="form-control extra-style" placeholder="Password" id="pwd">
+                                <div class="eye-pass" id="eye-pass">
+                                    <i class="fa fa-eye"></i>
+                                </div>
+                            </div>
+                            <div class="form-group item">
+                                <input type="password" class="form-control extra-style" placeholder="Confirm Password" id="cpwd">
+                                <div class="eye-cpass" id="eye-cpass">
+                                    <i class="fa fa-eye"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary form-submit">Sign Up</button>
-                    <div class="d-flex justify-content-end" style="padding-top: 20px"><span class="text-white">Need Help?</span></div>
-                    <div class="d-flex align-items-center" style="padding-top: 0px; height: 100px;">
-                        <span class="text-white">Have an account? Go to Sign in</span>
-                    </div>
-                </form>
+                        <button type="button" id="submit-btn" class="btn btn-primary form-submit">Sign Up</button>
+                        <div class="d-flex justify-content-end need-help-text"><span class="text-white">Need Help?</span></div>
+                        <div class="have-account-text">
+                            <span class="text-white">Have an account? Go to Sign in</span>
+                        </div>
+                    </form>
+                </div>
+                <div id="email-verify" style="display: none;">
+                    <h3 class="form-heading">E-mail Verification</h3>
+                    <form id="email_verify_form">
+                        <div class="form-group">
+                            <input type="text" class="form-control extra-style" placeholder="Enter E-mail" id="email1">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control extra-style" placeholder="Re-enter E-mail" id="email2">
+                        </div>
+                        <div class="form-group d-flex justify-content-end">
+                            <p class="text-white">Get Code</p>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

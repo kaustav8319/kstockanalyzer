@@ -16,6 +16,7 @@ dollar2 = document.querySelector('#dollar1');
 user.addEventListener('click', function() {
     var x = document.querySelector('#form_section');
     var y = document.querySelector('#email-verify');
+    var z = document.querySelector('#payment-section');
     
     user_icon2.style.display = 'block';
     shield2.style.display = 'none';
@@ -26,11 +27,13 @@ user.addEventListener('click', function() {
 
     x.style.display = "block";
     y.style.display = 'none';
+    z.style.display = 'none';
 });
 
 shield.addEventListener('click', function() {
     var x = document.querySelector('#form_section');
     var y = document.querySelector('#email-verify');
+    var z = document.querySelector('#payment-section');
     
     user_icon2.style.display = 'none';
     shield2.style.display = 'block';
@@ -40,7 +43,25 @@ shield.addEventListener('click', function() {
     dollar1.style.display = 'block';
 
     x.style.display = "none";
+    z.style.display = "none";
     y.style.display = 'block';
+});
+
+dollar.addEventListener('click', function() {
+    var x = document.querySelector('#form_section');
+    var y = document.querySelector('#email-verify');
+    var z = document.querySelector('#payment-section');
+    
+    user_icon2.style.display = 'none';
+    shield2.style.display = 'none';
+    dollar2.style.display = 'none';
+    user_icon1.style.display = 'block';
+    shield1.style.display = 'block';
+    dollar1.style.display = 'block';
+
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = 'block';
 });
 
 var eye_pass = document.querySelector('#eye-pass');
@@ -139,4 +160,17 @@ digit4.addEventListener('keyup', function(){
     if (value != undefined && value.toString().length >= 1) {
         event.preventDefault();
     }
+});
+
+var submit_otp_btn = document.querySelector('#submit-otp-btn');
+submit_otp_btn.addEventListener('click', function(){
+    var x = document.querySelector('#email-verify');
+    var y = document.querySelector('#payment-section');
+    x.style.display = 'none';
+    y.style.display = 'block';
+    dollar1.style.display = 'none';
+    dollar2.style.display = 'block';
+    
+    shield1.style.display = 'block';
+    shield2.style.display = 'none';
 });

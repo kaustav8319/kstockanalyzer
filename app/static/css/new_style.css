@@ -128,7 +128,7 @@ body {
         border-radius: 10px;
         background-color: #000;
         height: 90% !important;
-        padding: 20px;
+        padding: 20px 40px;
         /* border: 1px solid white; */
     }
 
@@ -153,6 +153,15 @@ body {
     .form-box > #email-verify > #email_verify_form{
         margin-top: 30px;
         /* border: 1px solid white; */
+    }
+
+    .form-box > #payment-section > #payment_form{
+        margin-top: 15px;
+        /* border: 1px solid white; */
+    }
+
+    #payment-section > .form-heading {
+        margin-top: 80px !important;
     }
 
     .form-group-outer {
@@ -298,6 +307,8 @@ body {
         width: 100%; 
         margin-right: 55px; 
         padding-top: 0px;
+        position: relative;
+        z-index: 3;
     }
 
     .nav-item {
@@ -402,7 +413,7 @@ body {
         border-radius: 10px;
         background-color: #000;
         height: 600px !important;
-        padding: 20px;
+        padding: 20px 40px;
     }
 
     .extra-style {
@@ -443,5 +454,29 @@ body {
         height: 170px !important;
         display: flex;
         align-items: center;
+    }
+
+    .otp-box {
+        /* border: 1px solid white; */
+        width: 100%;
+        height: 200px;
+    }
+
+    .otp-box .otp-box-item {
+        padding: 7px;
+    }
+
+    .otp-box .otp-box-item:nth-child(2){
+        height: 40%;
+    }
+
+    .otp-input-box > .otp-digit {
+        height: 80%;
+    }
+
+    .otp-box-item > .otp-msg {
+        text-align: center;
+        font-size: 10px;
+        width: 70%;
     }
 }

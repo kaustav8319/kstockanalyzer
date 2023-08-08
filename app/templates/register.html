@@ -53,20 +53,22 @@
                             <div class="form-group item">
                                 <input type="password" class="form-control extra-style" placeholder="Password" id="pwd">
                                 <div class="eye-pass" id="eye-pass">
-                                    <i class="fa fa-eye"></i>
+                                    <i class="fa fa-eye" id="pwd-open-eye"></i>
+                                    <i class="fa fa-eye-slash" id="pwd-close-eye" style="display: none;"></i>
                                 </div>
                             </div>
                             <div class="form-group item">
                                 <input type="password" class="form-control extra-style" placeholder="Confirm Password" id="cpwd">
                                 <div class="eye-cpass" id="eye-cpass">
-                                    <i class="fa fa-eye"></i>
+                                    <i class="fa fa-eye" id="cpwd-open-eye"></i>
+                                    <i class="fa fa-eye-slash" id="cpwd-close-eye" style="display: none;"></i>
                                 </div>
                             </div>
                         </div>
                         <button type="button" id="submit-btn" class="btn btn-primary form-submit">Sign Up</button>
                         <div class="d-flex justify-content-end need-help-text"><span class="text-white">Need Help?</span></div>
                         <div class="have-account-text">
-                            <span class="text-white">Have an account? Go to Sign in</span>
+                            <span class="text-white">Have an account? Go to <a href="#" class="sign-in-link">Sign in</a></span>
                         </div>
                     </form>
                 </div>
@@ -82,6 +84,26 @@
                         <div class="form-group d-flex justify-content-end">
                             <p class="text-white">Get Code</p>
                         </div>
+                        <div class="otp-box">
+                            <div class="otp-box-item">
+                                <span class="text-white otp-msg">Please enter the verification code sent to name.surname@gmail.com</span>
+                            </div>
+                            <div class="otp-box-item">
+                                <div class="otp-input-box">
+                                    <div class="otp-digit"><input type="number" class="otp-digit-n" name="digit1" id="digit1"></div>
+                                    <div class="otp-digit"><input type="number" class="otp-digit-n" name="digit2" id="digit2"></div>
+                                    <div class="otp-digit"><input type="number" class="otp-digit-n" name="digit3" id="digit3"></div>
+                                    <div class="otp-digit"><input type="number" class="otp-digit-n" name="digit4" id="digit4"></div>
+                                </div>
+                            </div>
+                            <div class="otp-box-item">
+                                <span class="text-white otp-msg">Didn't receive an OTP?</span>
+                            </div>
+                            <div class="otp-box-item">
+                                <span class="text-white otp-msg">Resend OTP?</span>
+                            </div>
+                        </div>
+                        <button type="button" id="submit-otp-btn" class="btn btn-primary form-submit">Submit</button>
                     </form>
                 </div>
             </div>

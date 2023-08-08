@@ -48,7 +48,19 @@ var eye_cpass = document.querySelector('#eye-cpass');
 var pwd = document.querySelector('#pwd');
 var cpwd = document.querySelector('#cpwd');
 
+pwd_open_eye = document.querySelector('#pwd-open-eye');
+pwd_close_eye = document.querySelector('#pwd-close-eye');
+cpwd_open_eye = document.querySelector('#cpwd-open-eye');
+cpwd_close_eye = document.querySelector('#cpwd-close-eye');
+
 eye_pass.addEventListener('click', function(){
+    if (pwd_open_eye.style.display == 'none'){
+        pwd_open_eye.style.display = 'block';
+        pwd_close_eye.style.display = 'none';
+    } else {
+        pwd_open_eye.style.display = 'none';
+        pwd_close_eye.style.display = 'block';
+    }
     if (pwd.type == 'password'){
         pwd.type = 'text';
     } else {
@@ -56,6 +68,13 @@ eye_pass.addEventListener('click', function(){
     }
 });
 eye_cpass.addEventListener('click', function(){
+    if (cpwd_open_eye.style.display == 'none'){
+        cpwd_open_eye.style.display = 'block';
+        cpwd_close_eye.style.display = 'none';
+    } else {
+        cpwd_open_eye.style.display = 'none';
+        cpwd_close_eye.style.display = 'block';
+    }
     if (cpwd.type == 'password'){
         cpwd.type = 'text';
     } else {
@@ -73,4 +92,51 @@ submit_btn.addEventListener('click', function(){
     
     shield2.style.display = 'block';
     shield1.style.display = 'none';
+});
+
+digit1 = document.querySelector('#digit1');
+digit2 = document.querySelector('#digit2');
+digit3 = document.querySelector('#digit3');
+digit4 = document.querySelector('#digit4');
+
+// document.querySelector('.otp-digit-n').addEventListener('keyup', function(event){
+//     var value = this.value;
+//     console.log("data = ",value);
+//     if (value != undefined && value.toString().length == 1) {
+//         // event.preventDefault();
+//         event.stopPropagation();
+//         console.log("Again Value: ",value);
+//         this.parentNode.nextElementSibling.children[0].focus();
+//     }
+// });
+digit1.addEventListener('keyup', function(event){
+    var value = digit1.value;
+    console.log("data = ",value);
+    if (value != undefined && value.toString().length >= 1) {
+        event.preventDefault();
+    }
+    digit2.focus();
+});
+digit2.addEventListener('keyup', function(event){
+    var value = digit2.value;
+    console.log("data = ",value);
+    if (value != undefined && value.toString().length >= 1) {
+        event.preventDefault();
+    }
+    digit3.focus();
+});
+digit3.addEventListener('keyup', function(){
+    var value = digit3.value;
+    console.log("data = ",value);
+    if (value != undefined && value.toString().length >= 1) {
+        event.preventDefault();
+    }
+    digit4.focus();
+});
+digit4.addEventListener('keyup', function(){
+    var value = digit4.value;
+    console.log("data = ",value);
+    if (value != undefined && value.toString().length >= 1) {
+        event.preventDefault();
+    }
 });

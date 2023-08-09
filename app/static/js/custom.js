@@ -20,10 +20,10 @@ user.addEventListener('click', function() {
     
     user_icon2.style.display = 'block';
     shield2.style.display = 'none';
-    dollar2.style.display = 'block';
+    dollar2.style.display = 'none';
     user_icon1.style.display = 'none';
     shield1.style.display = 'block';
-    dollar1.style.display = 'none';
+    dollar1.style.display = 'block';
 
     x.style.display = "block";
     y.style.display = 'none';
@@ -54,10 +54,10 @@ dollar.addEventListener('click', function() {
     
     user_icon2.style.display = 'none';
     shield2.style.display = 'none';
-    dollar2.style.display = 'none';
+    dollar2.style.display = 'block';
     user_icon1.style.display = 'block';
     shield1.style.display = 'block';
-    dollar1.style.display = 'block';
+    dollar1.style.display = 'none';
 
     x.style.display = "none";
     y.style.display = "none";
@@ -174,3 +174,13 @@ submit_otp_btn.addEventListener('click', function(){
     shield1.style.display = 'block';
     shield2.style.display = 'none';
 });
+
+function showhidePaymentDetailsSection(value){
+    if (value == 1) {
+        document.querySelector('#payment_toggle_section1').style.display = 'block';
+        document.querySelector('#payment_toggle_section2').style.display = 'none';
+    } else {
+        document.querySelector('#payment_toggle_section1').style.display = 'none';
+        document.querySelector('#payment_toggle_section2').style.display = 'block';
+    }
+}

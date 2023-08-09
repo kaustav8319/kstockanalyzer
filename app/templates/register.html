@@ -28,7 +28,7 @@
                 </div>
                 <div class="floating-menu-item" id="dollar_icon">
                     <img src="{% static 'image/dollar.png' %}" id="dollar" alt="dollar" style="display: block;"  width="10px" height="20px">
-                    <img src="{% static 'image/dollar.png' %}" id="dollar1" alt="dollar1" style="display: none;"  width="10px" height="20px">
+                    <img src="{% static 'image/dollar1.png' %}" id="dollar1" alt="dollar1" style="display: none;"  width="17px" height="20px">
                 </div>
             </div>
             <div style="background-image: url('{% static 'image/form_bg.png' %}');" class="form-box">
@@ -82,7 +82,7 @@
                             <input type="text" class="form-control extra-style" placeholder="Re-enter E-mail" id="email2">
                         </div>
                         <div class="form-group d-flex justify-content-end">
-                            <p class="text-white">Get Code</p>
+                            <p class="text-white get-code">Get Code</p>
                         </div>
                         <div class="otp-box">
                             <div class="otp-box-item">
@@ -110,15 +110,59 @@
                     <h3 class="form-heading">Subscribe to Kstockanalyzer</h3>
                     <h5 class="text-white" style="padding-top: 8px;">Payment Details</h5>
                     <form id="payment_form">
-                        <div class="form-group"  style="background-color: #fff; padding: 5px 10px; display: flex; justify-content: space-between;
-                        align-items: center;">
-                            <span style="border: 1px solid red; display: flex; align-items: center;">
-                                <input type="radio" id="card" name="card" value="card">
-                                <label for="card">Credit Card (Stripe)</label>
+                        <div class="form-check payment_option_checkbox">
+                            <span>
+                                <input type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked value="1" onclick="showhidePaymentDetailsSection(1)" >
+                                <label class="form-check-label"  for="flexRadioDefault2">
+                                Credit Card (Stripe)
+                                </label>
                             </span>
+                            <img src="{% static 'image/credit_card_type.png' %}" alt="Card Types" id="card_type" height="15px" width="100px">
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control extra-style" placeholder="Re-enter E-mail" id="email2">
+                        <div class="form-check payment_option_checkbox">
+                            <span>
+                                <input type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="2" onclick="showhidePaymentDetailsSection(2)" >
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                PayPal
+                                </label>
+                            </span>
+                            <img src="{% static 'image/paypal.png' %}" alt="Paypal" id="paypal" height="20px" width="100px">
+                        </div>
+                        <div id="payment_toggle_section1" class="payment_toggle_section1">
+                            <div class="form-group">
+                                <input type="text" class="form-control extra-style" placeholder="Name on the Card" id="card_name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control extra-style" placeholder="Card Number" id="card_no">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control extra-style" placeholder="Postal Code" id="postal_code">
+                            </div>
+                            <div class="d-flex justify-content-between form-group-outer">
+                                <div class="form-group item">
+                                    <input type="text" class="form-control extra-style" placeholder="Expiration Date" id="expiry_date">
+                                </div>
+                                <div class="form-group item">
+                                    <input type="text" class="form-control extra-style" placeholder="CVV" id="cvv">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="payment_toggle_section2" class="payment_toggle_section2">
+                            <div class="payment_via">
+                                <span>Pay via PayPal</span>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
+                                <label class="form-check-label text-white" for="flexCheckDefault">
+                                  I have read and agree to the website terms and conditions
+                                </label>
+                            </div>
+                        </div>
+                        <div id="final_submit" class="final_submit">
+                            <span class="text-white">
+                                Your account will be debited for the subscription fee after the trial period expires. You can try the service out after signing up for a month at no cost.
+                            </span>
+                            <button type="button" id="submit-otp-btn" class="btn btn-primary form-submit">Submit</button>
                         </div>
                     </form>
                 </div>

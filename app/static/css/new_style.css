@@ -49,6 +49,11 @@ body {
     }
     .nav-item {
         color: #ffffff;
+        margin-right: 5px;
+    }
+    .nav-item:hover {
+        color: #ffffff;
+        border-bottom: 1px solid #fff;
     }
     .content-box {
         width: 100%; 

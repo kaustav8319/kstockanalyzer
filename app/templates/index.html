@@ -6,35 +6,17 @@
 
 
 
-
-<style>
-  .looker-embed {
-    position: relative;
-    padding-top: 56.25%; /* Set the aspect ratio for the embed container */
-    height: 0;
-    overflow: hidden;
-  }
-
-  .looker-embed iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin-top: 30px;
-  }
-</style>
-
 <head>
     <meta charset="utf-8">
 	<title style="color:#f02409" >Stock Analyzer</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
     
-    <link rel="icon" href="{% static 'image/lo.png' %}">
+    <link rel="icon" href="{% static 'image/logo.png' %}">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -122,7 +104,7 @@
             
             <nav class="navbar bg-secondary navbar-dark">
                 <a href="#" class="navbar-brand mx-4 mb-3">
-                    <img src ="{% static 'image/log.png' %}"  alt="" style="width: 160px; height: 110px;">
+                    <img src ="{% static 'image/logo.png' %}"  alt="" style="width: 160px; height: 110px;">
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
@@ -131,7 +113,7 @@
                     </div>
                     <div class="ms-3">
                         <h6 class="mb-0">Welcome</h6>
-                        <span>User</span>
+                        <span>Guest</span>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
@@ -158,14 +140,14 @@
                 <form class="d-none d-md-flex ms-4">
                     <input class="form-control bg-dark border-0" type="search" placeholder="Search">
                     
-                    <img class="rounded-circle" src="{% static 'image/head.png' %}" alt="" style="width: 300px; height: 50px; margin-left: 100px; color: red; display: inline;
-                    float: right;">
+                    <img class="rounded-circle" src="{% static 'image/stock.png' %}" alt="" style="width: 60px; height: 40px; margin-left: 100px; color: red; display: inline;
+                    float: right;"><h3 style=" color: rgb(247, 0, 0); display: inline;"> KStockAnalyzer</h3>
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="{% static 'image/user.png' %}" alt="" style="width: 60px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">User</span>
+                            <span class="d-none d-lg-inline-flex">Guest</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             <a href="/profile" class="dropdown-item">profile</a>
@@ -175,10 +157,10 @@
                 </div>
             </nav>
             <!-- Navbar End -->
-            <div class="looker-embed", style="margin-top: 24px;">
+            <div style="margin-top: 24px;">
               <iframe width="1100" height="380" margin-top="50"; src="https://lookerstudio.google.com/embed/reporting/db32a024-e725-46a7-a11d-ad3c79ec1547/page/8bOHD" frameborder="0" style="border:0" allowfullscreen ></iframe>
           </div>
-          <div a style="width: 1200; height: 24; background-color:#000000; color: black;  position: relative;  bottom: 30px;"><p>.</p> </div>
+          <div a style="width: 1200; height: 24; background-color:#000000; color: black;  position: relative;  bottom: 30px;"><p>hello</p> </div>
 
 
 <div a style="margin: 24px; text-align: center;", class="tradingview-widget-container">
@@ -191,7 +173,6 @@
   {
   "width": 1050,
   "height": 570,
-  // "autosize": true,
   "symbol": "NASDAQ:AAPL",
   "interval": "D",
   "timezone": "Etc/UTC",
@@ -221,23 +202,22 @@
 
             
 <div><table>
-<tr><div a style="margin-top: 24px; margin-left: 24px; margin-right: 24px; border:0px;">
+<tr><td><div a style="margin-top: -24px; margin-left: 24px; margin-right: 24px; border:0px;">
 
 
     <h2>About</h2>
     <p style="color:#FFFFFF;  text-align: justify;"><b>This tool as the name suggests will analyze the “stock prices” in future. This will also provide recommendations based on data science and machine learning algorithms about different stocks specially for intraday (daily trade-in) whose prices will go up also a user will be able to apply multiple indicators and stratigies for personilized recommendations by using stock technical analyzer. This tool will have a nice dashboard where all the graphical interpretations about stock prices will be present.
     
         So any user who does not have good knowledge of the stock market can easily invest by using our tool “K-Stock Analyzer”. We have created this tool based on “LIVE STOCK DATA” and used statistical methods for predictions and recommendations.</b></p>
-    </div>
-    <br>
-		
+    </div></td>
+			<td>
                 <h2  style="text-align: center;">Top Stock Performance</h2>
-<div a style="margin-top: 24px; margin-right: 24px; margin-left:24px ; border:0px;" class="tradingview-widget-container">
+<div a style="margin-top: 24px; margin-right: 24px; border:0px;" class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
   <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/stocks-usa/" rel="noopener" target="_blank">
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
   {
-  "colorTheme": "dark",
+  "colorTheme": "light",
   "dateRange": "12M",
   "exchange": "NASDAQ",
   "showChart": true,
@@ -246,9 +226,8 @@
   "isTransparent": false,
   "showSymbolLogo": false,
   "showFloatingTooltip": false,
-  // "width": "480",
-  // "height": "450",
-  "autosize": true,
+  "width": "480",
+  "height": "450",
   "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
   "plotLineColorFalling": "rgba(41, 98, 255, 1)",
   "gridLineColor": "rgba(240, 243, 250, 0)",
@@ -261,7 +240,7 @@
 }
   </script>
 </div>
-</tr>
+</td></tr>
 		
 		
 		
@@ -317,7 +296,6 @@
       {
       "width": "1050",
       "height": "570",
-      
       "symbolsGroups": [
     
         {
